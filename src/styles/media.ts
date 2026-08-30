@@ -44,7 +44,7 @@ export const media = Object.keys(breakpoints).reduce<Media>(
         `
       },
       [key]: (...args: [TemplateStringsArray, ...SimpleInterpolation[]]) => css`
-        @media screen and (min-width: ${breakpoint / 16}rem) {
+        @media screen and (min-inline-size: ${breakpoint / 16}rem) {
           ${css(...args)}
         }
       `
